@@ -38,7 +38,7 @@ def predict_soh_batteries(folder_path):
     samples = final_dataset(folder_path, training=False)# Build inference dataset
     dat_set= DataLoader(InferenceDataset(samples), batch_size=1, shuffle=False)# Create dataloader
     model= MainModel(6)
-    model.load_state_dict(torch.load(r'model\best_model.pth'))# Load trained model
+    model.load_state_dict(torch.load('model/best_model.pth'))# Load trained model
     df = predict(dat_set, model)
     return df
 
