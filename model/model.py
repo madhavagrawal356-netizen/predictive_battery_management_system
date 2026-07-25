@@ -142,7 +142,7 @@ for epoch in range(epochs):
         best_r2=r2
         best_rmse=rmse
         best_model_epoch=epoch
-        torch.save(model.state_dict(), r'model\best_model.pth')
+        torch.save(model.state_dict(), 'model/best_model.pth')
     else:
         counter-=1
     print ('epoch:', epoch+1)
